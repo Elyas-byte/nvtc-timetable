@@ -32,7 +32,7 @@ const timetables = {
             { subject: "ISL", teacher: "NS", room: "A8", start: "13:05", end: "13:45" },
         ],
         3: [ // Wednesday
-            { subject: "ARB", teacher: "HS", room: "A1", start: "07:15", end: "08:00" },
+            { subject: "ARB", teacher: "HS", room: "A8", start: "07:15", end: "08:00" },
             { subject: "NE", teacher: "NS", room: "A8", start: "08:00", end: "08:45" },
             { subject: "ARC201", teacher: "MS/IA", room: "C3", start: "08:45", end: "09:30" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
