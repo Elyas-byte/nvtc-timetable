@@ -18,7 +18,8 @@ h1 {
     transition: color 0.3s, transform 0.3s; 
 }
 
-#current-class, #time-remaining, #next-class, #time-elapsed, #current-time, label {
+
+#current-class, #time-remaining, #next-class, #time-elapsed, #current-time, #label-class-select {
     margin: 15px 0;
     font-size: 1.2em;
     transition: color 0.3s, transform 0.3s; 
@@ -92,7 +93,7 @@ h1.dark {
     transition: color 0.3s; 
 }
 
-#current-class.dark, #time-remaining.dark, #next-class.dark, #time-elapsed.dark, #time-remaining.dark, label.dark {
+#current-class.dark, #time-remaining.dark, #next-class.dark, #time-elapsed.dark, #time-remaining.dark, #label-class-select.dark {
     color: #e0e0e0; 
     transition: color 0.1s; 
 }
