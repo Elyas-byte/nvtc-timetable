@@ -45,9 +45,8 @@ const timetables = {
         4: [ // Thursday
             { subject: "PHY201", teacher: "FM", room: "BB1", start: "07:00", end: "08:20" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:20", end: "08:45" },
-            { subject: "PE", teacher: "O", room: "PE", start: "08:45", end: "09:15" },
-            { subject: "PE-S", teacher: "New/O", room: "PE", start: "09:15", end: "9:55" },
-            { subject: "ARC201", teacher: "MS/IA", room: "C1", start: "9:55", end: "11:15" },
+            { subject: "PE", teacher: "O", room: "PE", start: "08:45", end: "09:55" },
+            { subject: "ARC201", teacher: "MS/IA", room: "C1", start: "09:55", end: "11:15" },
             { subject: "ENG201", teacher: "JP", room: "A2", start: "11:15", end: "11:55" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "11:55", end: "12:10" },
             { subject: "ENG201", teacher: "JP", room: "A2", start: "12:10", end: "12:55" },
@@ -122,45 +121,47 @@ const timetables = {
             { subject: "MAT201", teacher: "AQ", room: "B1", start: "13:05", end: "13:45" },
         ],
         1: [ // Monday
-            { subject: "DB201", teacher: "DR", room: "C2", start: "07:15", end: "08:45" },
-            { subject: "ENG201", teacher: "PJ", room: "A2", start: "08:45", end: "09:30" },
+            { subject: "MAT", teacher: "YA", room: "C1", start: "07:15", end: "08:45" },
+            { subject: "ISL", teacher: "NS", room: "A7", start: "08:00", end: "08:45" },
+            { subject: "ML201", teacher: "SG", room: "B7", start: "08:45", end: "09:30" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
-            { subject: "CHM201", teacher: "RY", room: "A2", start: "09:50", end: "10:35" },
-            { subject: "WEB102", teacher: "AK", room: "C2", start: "10:35", end: "12:05" },
-            { subject: "ARB", teacher: "HS", room: "A1", start: "12:05", end: "12:45" },
+            { subject: "ML201", teacher: "SG", room: "B7", start: "09:50", end: "10:35" },
+            { subject: "PHY201", teacher: "FM", room: "Ph. Lab", start: "10:35", end: "12:05" },
+            { subject: "ENG201", teacher: "JP", room: "A2", start: "12:05", end: "12:45" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
-            { subject: "SEC201", teacher: "KM", room: "C3", start: "13:05", end: "13:45" },
+            { subject: "ENG201", teacher: "JP", room: "A2", start: "13:05", end: "13:45" },
         ],
         2: [ // Tuesday
-            { subject: "MAT201", teacher: "AQ", room: "B1", start: "07:15", end: "08:45" },
-            { subject: "WEB102", teacher: "AK", room: "C4", start: "08:45", end: "09:30" },
+            { subject: "PHY201", teacher: "FM", room: "B9", start: "07:15", end: "08:45" },
+            { subject: "DB201", teacher: "DR", room: "C3", start: "08:00", end: "09:30" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
-            { subject: "WEB102", teacher: "AK", room: "C4", start: "09:50", end: "10:35" },
-            { subject: "OSI201", teacher: "KM", room: "C4", start: "10:35", end: "12:05" },
-            { subject: "ENG201", teacher: "PJ", room: "A2", start: "12:05", end: "12:45" },
-            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
-            { subject: "ENG201", teacher: "PJ", room: "A2", start: "13:05", end: "13:45" },
-        ],
-        3: [ // Wednesday 
-            { subject: "ENG201", teacher: "PJ", room: "A2", start: "07:15", end: "08:45" },
-            { subject: "DB201", teacher: "DR", room: "C2", start: "08:45", end: "09:30" },
-            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
-            { subject: "DB201", teacher: "DR", room: "C2", start: "09:50", end: "10:35" },
-            { subject: "OSI201", teacher: "KM", room: "C2", start: "10:35", end: "12:05" },
+            { subject: "DB201", teacher: "DR", room: "C3", start: "09:50", end: "10:35" },
+            { subject: "ARB", teacher: "HS", room: "A1", start: "10:35", end: "11:20" },
+            { subject: "ML201", teacher: "SG", room: "C1", start: "11:20", end: "12:05" },
             { subject: "PE", teacher: "O", room: "PE", start: "12:05", end: "12:45" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
             { subject: "PE-S", teacher: "New/O", room: "PE", start: "13:05", end: "13:45" },
+        ],
+        3: [ // Wednesday 
+            { subject: "BD201", teacher: "SG", room: "C1", start: "07:15", end: "08:45" },
+            { subject: "WEB201", teacher: "AK", room: "C1", start: "08:00", end: "09:30" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "WEB201", teacher: "AK", room: "C1", start: "09:50", end: "10:35" },
+            { subject: "CHM201", teacher: "RY", room: "Ch. Lab", start: "10:35", end: "12:05" },
+            { subject: "MAT201", teacher: "YA", room: "B6", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
+            { subject: "MAT201", teacher: "YA", room: "B6", start: "13:05", end: "13:45" },
 
         ],
         4: [
-            { subject: "SEC201", teacher: "KM", room: "C3", start: "07:00", end: "08:20" },
-            { subject: "ARB", teacher: "HS", room: "A8", start: "08:20", end: "09:00" },
+            { subject: "MAT201", teacher: "YA", room: "B6", start: "07:00", end: "08:20" },
+            { subject: "ML201", teacher: "SG", room: "C1", start: "08:20", end: "09:00" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:00", end: "09:15" },
-            { subject: "NE", teacher: "NS", room: "A7", start: "09:15", end: "9:55" },
-            { subject: "MAT201", teacher: "AQ", room: "B1", start: "9:55", end: "11:15" },
-            { subject: "PHY201", teacher: "FM", room: "B9", start: "11:15", end: "11:55" },
+            { subject: "ML201", teacher: "SG", room: "C1", start: "09:15", end: "09:55" },
+            { subject: "ENG201", teacher: "JP", room: "A2", start: "09:55", end: "11:15" },
+            { subject: "WEB201", teacher: "AK", room: "C2", start: "11:15", end: "11:55" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "11:55", end: "12:10" },
-            { subject: "PHY201", teacher: "FM", room: "B9", start: "12:10", end: "12:55" },
+            { subject: "WEB201", teacher: "AK", room: "C2", start: "12:10", end: "12:55" },
             { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
         ]
     }
@@ -211,7 +212,7 @@ function displayClasses() {
 
         // Highlight the current class
         if (currentClass && classInfo.subject === currentClass.subject && classInfo.teacher === currentClass.teacher) {
-            row.classList.add('highlight'); // Add highlight class
+            row.classList.add('highlight');
         }
 
         row.innerHTML = `
@@ -253,13 +254,13 @@ function displayClasses() {
             timeElapsedDiv.innerHTML = `Elapsed Time: ${elapsedMinutes} minutes and ${elapsedSeconds} seconds`;
         } else {
             timeRemainingDiv.innerHTML = "Class has ended.";
-            timeElapsedDiv.innerHTML = ""; // Clear elapsed time when class ends
+            timeElapsedDiv.innerHTML = "";
         }
 
     } else {
         currentClassDiv.innerHTML = "No current class.";
         timeRemainingDiv.innerHTML = "";
-        timeElapsedDiv.innerHTML = ""; // Clear elapsed time if no class
+        timeElapsedDiv.innerHTML = "";
         currentTimeDiv.innerHTML = ""
     }
 
@@ -284,7 +285,6 @@ function displayClasses() {
     }
 }
 
-// Initial call to populate the display
 displayClasses();
 
 // Update the display every second
@@ -292,13 +292,13 @@ setInterval(displayClasses, 1000);
 
 document.getElementById('class-select').addEventListener('change', displayClasses);
 
+
+
+// Dark theme handling
 const toggleThemeButton = document.getElementById('toggle-theme');
 
 toggleThemeButton.addEventListener('click', () => {
-    // Toggle dark class on body
     document.body.classList.toggle('dark');
-
-    // Toggle dark class on container
     const container = document.querySelector('.container');
     container.classList.toggle('dark');
     const header = document.querySelector('h1');
