@@ -44,8 +44,8 @@ const timetables = {
         ],
         4: [ // Thursday
             { subject: "PHY201", teacher: "FM", room: "BB1", start: "07:00", end: "08:20" },
-            { subject: "PE", teacher: "O", room: "PE", start: "08:20", end: "09:00" },
-            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:00", end: "09:15" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:20", end: "08:45" },
+            { subject: "PE", teacher: "O", room: "PE", start: "08:45", end: "09:15" },
             { subject: "PE-S", teacher: "New/O", room: "PE", start: "09:15", end: "9:55" },
             { subject: "ARC201", teacher: "MS/IA", room: "C1", start: "9:55", end: "11:15" },
             { subject: "ENG201", teacher: "JP", room: "A2", start: "11:15", end: "11:55" },
