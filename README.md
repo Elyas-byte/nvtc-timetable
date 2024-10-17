@@ -14,3 +14,5 @@ Adding timetables for every class can be time-consuming. To make the process mor
 4. **Submit a pull request:** Once you've completed the changes, submit a pull request to the main repository.
 
 Our maintainers will review your contribution and merge it into the main branch if it meets our quality standards.
+
+**If you encounter any issues or problems with the timetable, please submit an issue on this repository.** We'll do our best to address the problem promptly.
