@@ -1,12 +1,12 @@
-# NVTC Timetable
-
-## What is this?
+## NVTC Timetable
 
 This repository provides a comprehensive tool for viewing your class schedule.
 
 **If your class is not listed:**
 
-Adding a new class to the timetable involves a few steps. Please follow these instructions to contribute:
+Adding timetables for every class can be time-consuming. To make the process more efficient, we encourage community contributions.
+
+**To add your class's timetable:**
 
 1. **Fork the repository:** Create a copy of the repository under your GitHub account.
 2. **Analyze the code:** Examine the existing code to understand how timetables are structured and displayed.
