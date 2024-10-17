@@ -1,6 +1,6 @@
-## NVTC Timetable
+# NVTC Timetable
 
-# What is this?
+## What is this?
 
 This repository provides a comprehensive tool for viewing your class schedule.
 
