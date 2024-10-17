@@ -101,8 +101,8 @@ const timetables = {
             { subject: "MAT201", teacher: "YA", room: "B6", start: "07:00", end: "08:20" },
             { subject: "ML201", teacher: "SG", room: "C1", start: "08:20", end: "09:00" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:00", end: "09:15" },
-            { subject: "ML201", teacher: "SG", room: "C1", start: "09:15", end: "09:55" },
-            { subject: "ENG201", teacher: "JP", room: "A2", start: "09:55", end: "11:15" },
+            { subject: "ML201", teacher: "SG", room: "C1", start: "09:15", end: "9:55" },
+            { subject: "ENG201", teacher: "JP", room: "A2", start: "9:55", end: "11:15" },
             { subject: "WEB201", teacher: "AK", room: "C2", start: "11:15", end: "11:55" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "11:55", end: "12:10" },
             { subject: "WEB201", teacher: "AK", room: "C2", start: "12:10", end: "12:55" },
@@ -293,16 +293,27 @@ setInterval(displayClasses, 1000);
 document.getElementById('class-select').addEventListener('change', displayClasses);
 
 
-
-// Dark theme handling
 const toggleThemeButton = document.getElementById('toggle-theme');
 
-toggleThemeButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
+// Set theme and save choice to localstorage
+function setTheme(theme) {
+    document.body.classList.toggle('dark', theme === 'dark');
     const container = document.querySelector('.container');
-    container.classList.toggle('dark');
+    container.classList.toggle('dark', theme === 'dark');
     const header = document.querySelector('h1');
-    header.classList.toggle('dark');
+    header.classList.toggle('dark', theme === 'dark');
     const label = document.querySelector('label');
-    label.classList.toggle('dark');
+    label.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+}
+
+// Check for a saved theme preference on page load
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    setTheme(savedTheme);
+}
+
+toggleThemeButton.addEventListener('click', () => {
+    const currentTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+    setTheme(currentTheme);
 });
