@@ -165,7 +165,7 @@ const timetables = {
             { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
         ]
     },
-    3: { // 12.CCP
+    3: { // 12.CCP - done by Ahmed Quraish NV23146
         0: [ // Sunday
             { subject: "GRD301", teacher: "AK/MS", room: "B8", start: "07:15", end: "08:45" },
             { subject: "Math", teacher: "KNT/JA", room: "B3", start: "08:45", end: "09:30" },
@@ -221,7 +221,7 @@ const timetables = {
             { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
         ]
     },
-    4: { // 12.AI
+    4: { // 12.AI - done by Ahmed Quraish NV23146
         0: [ // Sunday
             { subject: "ML301", teacher: "AA", room: "B7", start: "07:15", end: "08:45" },
             { subject: "DL301", teacher: "SG/AA", room: "C1", start: "08:45", end: "09:30" },
