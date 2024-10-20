@@ -369,6 +369,8 @@ function displayClasses() {
     const currentDay = now.getDay(); // 0-6 (Sun-Sat)
     const todayClasses = timetables[selectedClass][currentDay] || [];
 
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
     // Get the current class and next class
     const { currentClass, nextClass } = getClassSchedule(selectedClass);
 
@@ -416,7 +418,7 @@ function displayClasses() {
             const elapsedSeconds = elapsedTime % 60;
 
             timeRemainingDiv.innerHTML = `Time Remaining: ${minutes} minutes and ${seconds} seconds`;
-            currentTimeDiv.innerHTML = `Current Time: ${now.toLocaleTimeString('en-US', { hour12: false })}`;
+            currentTimeDiv.innerHTML = `Current Time: ${now.toLocaleTimeString('en-US', { hour12: false })} (${days[currentDay]})`;
             timeElapsedDiv.innerHTML = `Elapsed Time: ${elapsedMinutes} minutes and ${elapsedSeconds} seconds`;
         } else {
             timeRemainingDiv.innerHTML = "Class has ended.";
@@ -491,10 +493,9 @@ if (savedClass) {
     document.getElementById('class-select').value = savedClass;
 }
 
-// Save selected class to localStorage whenever it changes
 document.getElementById('class-select').addEventListener('change', function() {
     localStorage.setItem('selectedClass', this.value);
-    displayClasses(); // Update the display immediately
+    displayClasses();
 });
 
 
