@@ -483,3 +483,19 @@ toggleThemeButton.addEventListener('click', () => {
     const currentTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
     setTheme(currentTheme);
 });
+
+
+// Load selected class from localStorage on page load
+const savedClass = localStorage.getItem('selectedClass');
+if (savedClass) {
+    document.getElementById('class-select').value = savedClass;
+}
+
+// Save selected class to localStorage whenever it changes
+document.getElementById('class-select').addEventListener('change', function() {
+    localStorage.setItem('selectedClass', this.value);
+    displayClasses(); // Update the display immediately
+});
+
+
+displayClasses();
