@@ -386,7 +386,7 @@ const timetables = {
             { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
         ]
     },
-    9: { // 11.GE 1
+    8: { // 11.GE 1
         0: [ // Sunday
             { subject: "ENGG204", teacher: "HB/W", room: "W.1", start: "07:15", end: "08:45" },
             { subject: "English", teacher: "GA", room: "A3", start: "08:45", end: "09:30" },
