@@ -173,7 +173,7 @@ const timetables = {
             { subject: "Math", teacher: "KNT/JA", room: "B3", start: "09:50", end: "10:35" },
             { subject: "Arab", teacher: "AM", room: "A8", start: "10:35", end: "11:20" },
             { subject: "ISL", teacher: "AR", room: "A8", start: "11:20", end: "12:05" },
-            { subject: "IOT301", teacher: "AA", room: "B7", start: "12:05", end: "12:45"},
+            { subject: "IOT301", teacher: "AA", room: "B7", start: "12:05", end: "12:45" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
             { subject: "IOT301", teacher: "AA", room: "B7", start: "13:05", end: "13:45" },
         ],
@@ -209,7 +209,7 @@ const timetables = {
             { subject: "English", teacher: "SS", room: "A5", start: "13:05", end: "13:45" },
 
         ],
-        4: [ 
+        4: [
             { subject: "CC301", teacher: "AK", room: "B8", start: "07:00", end: "08:20" },
             { subject: "English", teacher: "SS", room: "A5", start: "08:20", end: "09:00" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:00", end: "09:15" },
@@ -225,7 +225,7 @@ const timetables = {
         0: [ // Sunday
             { subject: "ML301", teacher: "AA", room: "B7", start: "07:15", end: "08:45" },
             { subject: "DL301", teacher: "SG/AA", room: "C1", start: "08:45", end: "09:30" },
-            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },            
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
             { subject: "DL301", teacher: "SG/AA", room: "C1", start: "09:50", end: "10:35" },
             { subject: "English", teacher: "SS", room: "A5", start: "10:35", end: "12:05" },
             { subject: "Physics", teacher: "SK", room: "Ph. Lab", start: "12:05", end: "12:45" },
@@ -264,7 +264,7 @@ const timetables = {
             { subject: "IOT301", teacher: "AA", room: "B7", start: "13:05", end: "13:45" },
 
         ],
-        4: [ 
+        4: [
             { subject: "Physics", teacher: "SK", room: "B9", start: "07:00", end: "08:20" },
             { subject: "IOT301", teacher: "AA", room: "B7", start: "08:20", end: "09:00" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:00", end: "09:15" },
@@ -318,7 +318,7 @@ const timetables = {
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
             { subject: "Math", teacher: "KNT", room: "B3", start: "13:05", end: "13:45" },
         ],
-        4: [ 
+        4: [
             { subject: "English", teacher: "SS", room: "A5", start: "07:00", end: "08:20" },
             { subject: "GRD301", teacher: "KM/IA", room: "C4", start: "08:20", end: "09:00" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:00", end: "09:15" },
@@ -386,6 +386,61 @@ const timetables = {
             { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
         ]
     },
+    7: { // 11.AE 2 -- By Ahmed Quraish
+        0: [ // Sunday
+            { subject: "Physics", teacher: "AFT", room: "Ph. Lab", start: "07:15", end: "08:45" },
+            { subject: "ENGG301", teacher: "AG/MC", room: "W.5", start: "08:45", end: "09:30" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "ENGG302", teacher: "AI/DS", room: "BB2", start: "09:50", end: "10:35" },
+            { subject: "Arab", teacher: "HS", room: "A7", start: "10:35", end: "11:20" },
+            { subject: "ENG357", teacher: "FB/RS", room: "W.3", start: "11:20", end: "12:05" },
+            { subject: "Math", teacher: "YA", room: "B6", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
+            { subject: "Math", teacher: "YA", room: "B6", start: "13:05", end: "13:45" },
+
+        ],
+        1: [ // Monday
+            { subject: "ENG357", teacher: "FB/RS", room: "W.3", start: "07:15", end: "08:45" },
+            { subject: "Physics", teacher: "AFT", room: "B9", start: "08:45", end: "09:30" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "Physics", teacher: "AFT", room: "B9", start: "09:50", end: "10:35" },
+            { subject: "Math", teacher: "YA", room: "B6", start: "10:35", end: "12:05" },
+            { subject: "E", teacher: "ZN", room: "A4", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
+            { subject: "E", teacher: "ZN", room: "A5", start: "13:05", end: "13:45" },
+        ],
+        2: [ // Tuesday
+            { subject: "E", teacher: "ZN", room: "A5", start: "07:15", end: "08:45" },
+            { subject: "ENGG302", teacher: "AI/DS", room: "BB2", start: "08:45", end: "09:30" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "ENGG302", teacher: "AI/DS", room: "BB2", start: "09:50", end: "10:35" },
+            { subject: "PE", teacher: "O", room: "PE", start: "10:35", end: "12:05" },
+            { subject: "Islam", teacher: "NS", room: "A8", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
+            { subject: "Math", teacher: "YA", room: "B6", start: "13:05", end: "13:45" },
+        ],
+        3: [ // Wednesday 
+            { subject: "CS201", teacher: "AA/DN", room: "B2", start: "07:15", end: "08:45" },
+            { subject: "Chemistry", teacher: "RY", room: "CH. Lab", start: "08:45", end: "09:30" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "Chemistry", teacher: "RY", room: "CH. Lab", start: "09:50", end: "10:35" },
+            { subject: "ENG357", teacher: "FB/RS", room: "W.3", start: "10:35", end: "12:05" },
+            { subject: "ENGG301", teacher: "AG/MC", room: "W.1", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
+            { subject: "ENGG301", teacher: "AG/MC", room: "W.1", start: "13:05", end: "13:45" },
+        ],
+        4: [
+            { subject: "ENGG301", teacher: "AG/MC", room: "W.1", start: "07:00", end: "08:20" },
+            { subject: "NE", teacher: "NS", room: "A9", start: "08:20", end: "09:00" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:00", end: "09:15" },
+            { subject: "Arab", teacher: "HS", room: "A1", start: "09:15", end: "09:55" },
+            { subject: "E", teacher: "ZN", room: "A5", start: "09:55", end: "11:15" },
+            { subject: "ENGG302", teacher: "AG/MC", room: "W.1", start: "11:15", end: "11:55" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "11:55", end: "12:10" },
+            { subject: "ENGG302", teacher: "AG/MC", room: "W.1", start: "12:10", end: "12:50" },
+            { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
+        ]
+    },
     8: { // 11.GE 1
         0: [ // Sunday
             { subject: "ENGG204", teacher: "HB/W", room: "W.1", start: "07:15", end: "08:45" },
@@ -441,6 +496,54 @@ const timetables = {
             { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
         ]
     },
+    14: { // 10.E1 -- By Ahmed Quraish
+        0: [ // Sunday
+            { subject: "Physics", teacher: "AC/SK", room: "B9", start: "07:15", end: "08:45" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:45", end: "09:05" },
+            { subject: "Arab", teacher: "KJ", room: "A9", start: "09:05", end: "09:50" },
+            { subject: "NE", teacher: "TA/HS", room: "A1", start: "09:50", end: "10:35" },
+            { subject: "Math", teacher: "SH", room: "B4", start: "10:35", end: "12:05" },
+            { subject: "Math", teacher: "YA", room: "B6", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:05", end: "12:25" },
+            { subject: "HSE101", teacher: "RC", room: "W.5", start: "12:25", end: "13:45" },
+        ],
+        1: [ // Monday
+            { subject: "Arab", teacher: "KJ", room: "A9", start: "07:15", end: "08:00" },
+            { subject: "Islam", teacher: "AM/TA", room: "A1", start: "08:00", end: "08:45" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "E", teacher: "TS", room: "A3", start: "09:05", end: "10:35" },
+            { subject: "ME01", teacher: "GB/HS", room: "W.1", start: "10:35", end: "12:05" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:05", end: "12:25" },
+            { subject: "EE02", teacher: "AM/MD", room: "W.4", start: "12:25", end: "13:45" },
+        ],
+        2: [ // Tuesday
+            { subject: "EE01", teacher: "DT/DN", room: "W.3", start: "07:15", end: "08:45" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:45", end: "09:05" },
+            { subject: "E", teacher: "TS", room: "A3", start: "09:05", end: "10:35" },
+            { subject: "ME01", teacher: "GB/HS", room: "W.1", start: "10:35", end: "12:05" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:05", end: "12:25" },
+            { subject: "Math", teacher: "SH", room: "B4", start: "12:25", end: "13:05" },
+            { subject: "ME2", teacher: "W/MS", room: "W.2", start: "13:05", end: "13:45" },
+        ],
+        3: [ // Wednesday 
+            { subject: "E", teacher: "TS", room: "A3", start: "07:15", end: "08:45" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:45", end: "09:05" },
+            { subject: "Math", teacher: "SH", room: "B4", start: "09:05", end: "10:35" },
+            { subject: "Physics", teacher: "AC/SK", room: "Ph. Lab", start: "10:35", end: "12:05" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:05", end: "12:25" },
+            { subject: "ME2", teacher: "W/MS", room: "W.2", start: "12:25", end: "13:45" },
+        ],
+        4: [ 
+            { subject: "Chemistry", teacher: "SS", room: "CH. Lab", start: "07:00", end: "08:20" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:20", end: "08:35" },
+            { subject: "EE01", teacher: "DT/DN", room: "W,3", start: "08:35", end: "09:15" },
+            { subject: "EE02", teacher: "AM/MD", room: "W,4", start: "09:15", end: "10:35" },
+            { subject: "C.S101", teacher: "HA", room: "B2", start: "10:35", end: "11:15" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "11:15", end: "11:30" },
+            { subject: "PE", teacher: "O", room: "PE", start: "11:30", end: "12:50" },
+            { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
+        ]
+    },
 };
 function getClassSchedule(selectedClass) {
     const now = new Date();
@@ -479,7 +582,7 @@ function displayClasses() {
     const currentDay = now.getDay(); // 0-6 (Sun-Sat)
     const todayClasses = timetables[selectedClass][currentDay] || [];
 
-    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
     // Get the current class and next class
     const { currentClass, nextClass } = getClassSchedule(selectedClass);
@@ -603,7 +706,7 @@ if (savedClass) {
     document.getElementById('class-select').value = savedClass;
 }
 
-document.getElementById('class-select').addEventListener('change', function() {
+document.getElementById('class-select').addEventListener('change', function () {
     localStorage.setItem('selectedClass', this.value);
     displayClasses();
 });
