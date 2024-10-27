@@ -1187,7 +1187,61 @@ export const timetables = {
             { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
         ]
     },
-    25: { // 12.SP1
+    22: { // 12.GM
+        0: [ // Sunday
+            { subject: "ENGG202", teacher: "AI/RS", room: "W.5", start: "07:15", end: "08:45" },
+            { subject: "E", teacher: "VS", room: "A6", start: "08:45", end: "09:30" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "E", teacher: "VS", room: "A6", start: "09:50", end: "10:35" },
+            { subject: "ENGG204", teacher: "HS/MC", room: "W.1", start: "10:35", end: "12:05" },
+            { subject: "FAB301", teacher: "D/MS", room: "W.2", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
+            { subject: "FAB301", teacher: "D/MS", room: "W.2", start: "13:05", end: "13:45" },
+        ],
+        1: [ // Monday
+            { subject: "E", teacher: "VS", room: "A6", start: "07:15", end: "08:00" },
+            { subject: "Islam", teacher: "AR", room: "A8", start: "08:00", end: "08:45" },
+            { subject: "Arab", teacher: "AM", room: "A8", start: "08:45", end: "09:30" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "FAB301", teacher: "D/MS", room: "W.2", start: "09:50", end: "10:35" },
+            { subject: "Math", teacher: "AQ", room: "B1", start: "10:35", end: "12:05" },
+            { subject: "ENGG203", teacher: "MC/AG", room: "BB2", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
+            { subject: "ENGG203", teacher: "MC/AG", room: "BB2", start: "13:05", end: "13:45" },
+        ],
+        2: [ // Tuesday
+            { subject: "ENGG202", teacher: "AI/RS", room: "W.5", start: "07:15", end: "08:45" },
+            { subject: "Arab", teacher: "AM", room: "A8", start: "08:45", end: "09:30" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "History", teacher: "AR", room: "A7", start: "09:50", end: "10:35" },
+            { subject: "Sci.", teacher: "SS", room: "BB1", start: "10:35", end: "12:05" },
+            { subject: "RTS301", teacher: "RC", room: "W.6", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
+            { subject: "RTS301", teacher: "RC", room: "W.6", start: "13:05", end: "13:45" },
+        ],
+        3: [ // Wednesday
+            { subject: "ENGG203", teacher: "MC/AG", room: "BB2", start: "07:15", end: "08:45"},
+            { subject: "Sci.", teacher: "SS", room: "B9", start: "08:45", end: "09:30" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "Sci.", teacher: "SS", room: "B9", start: "09:50", end: "10:35" },
+            { subject: "E", teacher: "VS", room: "A6", start: "10:35", end: "12:05" },
+            { subject: "ENGG204", teacher: "HS/MC", room: "W.1", start: "12:05", end: "12:45" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
+            { subject: "ENGG204", teacher: "HS/MC", room: "W.1", start: "13:05", end: "13:45" },
+        ],
+        4: [ // Thursday
+            { subject: "FAB301", teacher: "D/MS", room: "W.2", start: "07:00", end: "08:20" },
+            { subject: "Math", teacher: "AQ", room: "B1", start: "08:20", end: "09:00" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:00", end: "09:15" },
+            { subject: "History", teacher: "AR", room: "A8", start: "09:15", end: "09:55" },
+            { subject: "E", teacher: "VS", room: "A6", start: "09:55", end: "11:15" },
+            { subject: "ENGG204", teacher: "HS/MC", room: "W.1", start: "11:15", end: "11:55" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "11:55", end: "12:10" },
+            { subject: "ENGG204", teacher: "HS/MC", room: "W.1", start: "12:10", end: "12:55" },
+            { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
+        ]
+    },
+    24: { // 12.SP1
         0: [ // Sunday
             { subject: "SWM", teacher: "BK", room: "SP", start: "07:15", end: "08:00" },
             { subject: "Fitness", teacher: "ATB", room: "A9", start: "08:00", end: "08:45" },
