@@ -610,7 +610,7 @@ export const timetables = {
         1: [ // Monday
             { subject: "Math", teacher: "FH", room: "B5", start: "07:15", end: "08:00" },
             { subject: "Arab", teacher: "KJ", room: "A9", start: "08:00", end: "08:45" },
-            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:45", end: "09:05" },
             { subject: "E", teacher: "RED", room: "A4", start: "09:05", end: "10:35" },
             { subject: "PL101", teacher: "SG", room: "B7", start: "10:35", end: "12:05" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:05", end: "12:25" },
@@ -655,7 +655,7 @@ export const timetables = {
         1: [ // Monday
             { subject: "PL101", teacher: "HA", room: "B2", start: "07:15", end: "08:00" },
             { subject: "Math", teacher: "FH", room: "B8", start: "08:00", end: "08:45" },
-            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:45", end: "09:05" },
             { subject: "Arab", teacher: "KJ", room: "A9", start: "09:05", end: "09:50" },
             { subject: "Islam", teacher: "TA/NS", room: "A1", start: "09:50", end: "10:35" },
             { subject: "IT101", teacher: "IA", room: "B2", start: "10:35", end: "12:05" },
@@ -689,7 +689,7 @@ export const timetables = {
             { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
         ]
     },
-    13: { // 10.IT2
+    13: { // 10.IT3
         0: [ // Sunday
             { subject: "E", teacher: "RED", room: "A4", start: "07:15", end: "08:45" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:45", end: "09:05" },
@@ -700,7 +700,7 @@ export const timetables = {
         ],
         1: [ // Monday
             { subject: "Phy", teacher: "HA", room: "B2", start: "07:15", end: "08:45" },
-            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:45", end: "09:05" },
             { subject: "CC101", teacher: "MS", room: "C2", start: "09:05", end: "09:50" },
             { subject: "Islam", teacher: "TA/NS", room: "A1", start: "09:50", end: "10:35" },
             { subject: "IT101", teacher: "IA", room: "B2", start: "10:35", end: "12:05" },
@@ -747,7 +747,7 @@ export const timetables = {
         1: [ // Monday
             { subject: "Arab", teacher: "KJ", room: "A9", start: "07:15", end: "08:00" },
             { subject: "Islam", teacher: "AM/TA", room: "A1", start: "08:00", end: "08:45" },
-            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:45", end: "09:05" },
             { subject: "E", teacher: "TS", room: "A3", start: "09:05", end: "10:35" },
             { subject: "ME01", teacher: "GB/HS", room: "W.1", start: "10:35", end: "12:05" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:05", end: "12:25" },
