@@ -351,11 +351,11 @@ export const timetables = {
         ],
         2: [ // Tuesday
             { subject: "Math", teacher: "YA", room: "B6", start: "07:15", end: "08:00" },
-            { subject: "Arab", teacher: "HS", room: "A7", start: "07:15", end: "08:00" },
+            { subject: "Arab", teacher: "HS", room: "A7", start: "08:00", end: "08:45" },
             { subject: "ENGG301", teacher: "AG/MC", room: "W.5", start: "08:45", end: "09:30" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
             { subject: "ENGG301", teacher: "AG/MC", room: "W.5", start: "09:50", end: "10:35" },
-            { subject: "ENG357", teacher: "W.4", room: "FB/RS", start: "10:35", end: "12:05" },
+            { subject: "ENG357", teacher: "W.4", room: "FB/RS", start: "11:20", end: "12:05" },
             { subject: "Chemistry", teacher: "RY/SS", room: "CH.Lab", start: "12:05", end: "12:45" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
             { subject: "Chemistry", teacher: "RY/SS", room: "CH.Lab", start: "13:05", end: "13:45" },
