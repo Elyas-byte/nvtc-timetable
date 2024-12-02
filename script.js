@@ -1,27 +1,33 @@
 import { timetables } from "./timetable.js";
 
-function getClassSchedule(selectedClass) {
+function getClassSchedule(selectedClass, selectedDay) {
     const now = new Date();
     const currentTime = now.toTimeString().slice(0, 5); // HH:MM format
     const currentDay = now.getDay(); // 0-6 (Sun-Sat)
 
-    const todayClasses = timetables[selectedClass][currentDay] || [];
+    // Use selected day for classes, but current time for determining current/next class
+    const dayClasses = timetables[selectedClass][selectedDay] || [];
     let currentClass = null;
     let nextClass = null;
 
-    todayClasses.forEach((classInfo, index) => {
-        if (currentTime >= classInfo.start && currentTime < classInfo.end) {
-            currentClass = classInfo;
-            nextClass = todayClasses[index + 1] || null;
-        }
-    });
+    // Only calculate current and next class if viewing current day
+    if (selectedDay === currentDay) {
+        dayClasses.forEach((classInfo, index) => {
+            if (currentTime >= classInfo.start && currentTime < classInfo.end) {
+                currentClass = classInfo;
+                nextClass = dayClasses[index + 1] || null;
+            }
+        });
+    }
 
-    return { currentClass, nextClass, todayClasses, currentDay };
+    return { currentClass, nextClass, dayClasses, currentDay };
 }
 
 function displayClasses() {
     const classSelect = document.getElementById('class-select');
+    const daySelect = document.getElementById('day');
     const selectedClass = classSelect.value;
+    const selectedDay = parseInt(daySelect.value);
     const currentClassDiv = document.getElementById('current-class');
     const timeRemainingDiv = document.getElementById('time-remaining');
     const nextClassDiv = document.getElementById('next-class');
@@ -29,25 +35,24 @@ function displayClasses() {
     const timeElapsedDiv = document.getElementById('time-elapsed');
     const currentTimeDiv = document.getElementById('current-time');
 
-
     // Clear the table body
     scheduleBody.innerHTML = '';
 
     const now = new Date();
-    const currentDay = now.getDay(); // 0-6 (Sun-Sat)
-    const todayClasses = timetables[selectedClass][currentDay] || [];
+    const currentDay = now.getDay();
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    // Get the schedule information
+    const { currentClass, nextClass, dayClasses } = getClassSchedule(selectedClass, selectedDay);
 
-    // Get the current class and next class
-    const { currentClass, nextClass } = getClassSchedule(selectedClass);
-
-    // Populate the schedule table for today's classes
-    todayClasses.forEach((classInfo) => {
+    // Populate the schedule table for selected day's classes
+    dayClasses.forEach((classInfo) => {
         const row = document.createElement('tr');
 
-        // Highlight the current class
-        if (currentClass && classInfo.subject === currentClass.subject && classInfo.teacher === currentClass.teacher) {
+        // Only highlight current class if viewing current day
+        if (selectedDay === currentDay && currentClass &&
+            classInfo.subject === currentClass.subject &&
+            classInfo.teacher === currentClass.teacher) {
             row.classList.add('highlight');
         }
 
@@ -60,28 +65,26 @@ function displayClasses() {
         `;
         scheduleBody.appendChild(row);
     });
-    if (currentClass) {
+
+    // Only show current class info if viewing current day
+    if (selectedDay === currentDay && currentClass) {
         currentClassDiv.innerHTML = `Current Class: ${currentClass.subject} (Room: ${currentClass.room}, ${currentClass.teacher})`;
 
         // Calculate end time
         const currentClassEnd = new Date();
         const [endHour, endMinute] = currentClass.end.split(':');
         currentClassEnd.setHours(endHour, endMinute, 0);
-        const remainingTime = Math.ceil((currentClassEnd - new Date()) / 1000); // in seconds
+        const remainingTime = Math.ceil((currentClassEnd - new Date()) / 1000);
 
         // Calculate start time
         const currentClassStart = new Date();
         const [startHour, startMinute] = currentClass.start.split(':');
         currentClassStart.setHours(startHour, startMinute, 0);
-        const elapsedTime = Math.ceil((new Date() - currentClassStart) / 1000); // in seconds
+        const elapsedTime = Math.ceil((new Date() - currentClassStart) / 1000);
 
         if (remainingTime > 0) {
-            const timeNow = now.getSeconds();
-            const hours = now.getHours();
-            const minutesNow = now.getMinutes();
             const minutes = Math.floor(remainingTime / 60);
             const seconds = remainingTime % 60;
-
             const elapsedMinutes = Math.floor(elapsedTime / 60);
             const elapsedSeconds = elapsedTime % 60;
 
@@ -92,23 +95,21 @@ function displayClasses() {
             timeRemainingDiv.innerHTML = "Class has ended.";
             timeElapsedDiv.innerHTML = "";
         }
-
     } else {
-        currentClassDiv.innerHTML = "No current class.";
+        currentClassDiv.innerHTML = selectedDay === currentDay ? "No current class." : `Viewing schedule for ${days[selectedDay]}`;
         timeRemainingDiv.innerHTML = "";
         timeElapsedDiv.innerHTML = "";
-        currentTimeDiv.innerHTML = ""
+        currentTimeDiv.innerHTML = selectedDay === currentDay ? now.toLocaleTimeString('en-US', { hour12: false }) : "";
     }
 
-    // Check for the next class
-    if (nextClass) {
+    // Only show next class info if viewing current day
+    if (selectedDay === currentDay && nextClass) {
         nextClassDiv.innerHTML = `Next Class: ${nextClass.subject} (Room: ${nextClass.room})`;
 
-        // Check if there's 1 minute left for the next class
         const nextClassStart = new Date();
         const [startHour, startMinute] = nextClass.start.split(':');
         nextClassStart.setHours(startHour, startMinute, 0);
-        const timeUntilNextClass = Math.ceil((nextClassStart - new Date()) / 1000); // in seconds
+        const timeUntilNextClass = Math.ceil((nextClassStart - new Date()) / 1000);
 
         if (timeUntilNextClass <= 300 && timeUntilNextClass > 0) {
             nextClassDiv.classList.add('blinking-red');
@@ -116,22 +117,42 @@ function displayClasses() {
             nextClassDiv.classList.remove('blinking-red');
         }
     } else {
-        nextClassDiv.innerHTML = "No more classes for today.";
+        nextClassDiv.innerHTML = selectedDay === currentDay ? "No more classes for today." : "";
         nextClassDiv.classList.remove('blinking-red');
     }
 }
 
+// Initialize day select with options
+function initializeDaySelect() {
+    const daySelect = document.getElementById('day');
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDay = new Date().getDay();
+
+    days.forEach((day, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.text = day;
+        daySelect.appendChild(option);
+    });
+
+    // Set default value to current day
+    daySelect.value = currentDay;
+}
+
+// Initialize day select when page loads
+initializeDaySelect();
+
+// Add event listener for day select
+document.getElementById('day').addEventListener('change', displayClasses);
+
+// Keep existing event listeners and interval
 displayClasses();
-
-// Update the display every second
 setInterval(displayClasses, 1000);
-
 document.getElementById('class-select').addEventListener('change', displayClasses);
 
-
+// Keep existing theme toggle functionality
 const toggleThemeButton = document.getElementById('toggle-theme');
 
-// Set theme and save choice to localstorage
 function setTheme(theme) {
     document.body.classList.toggle('dark', theme === 'dark');
     const container = document.querySelector('.container');
@@ -143,7 +164,6 @@ function setTheme(theme) {
     localStorage.setItem('theme', theme);
 }
 
-// Check for a saved theme preference on page load
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     setTheme(savedTheme);
@@ -154,8 +174,7 @@ toggleThemeButton.addEventListener('click', () => {
     setTheme(currentTheme);
 });
 
-
-// Load selected class from localStorage on page load
+// Load saved preferences
 const savedClass = localStorage.getItem('selectedClass');
 if (savedClass) {
     document.getElementById('class-select').value = savedClass;
@@ -165,6 +184,5 @@ document.getElementById('class-select').addEventListener('change', function () {
     localStorage.setItem('selectedClass', this.value);
     displayClasses();
 });
-
 
 displayClasses();
