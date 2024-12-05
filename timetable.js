@@ -55,7 +55,7 @@ export const timetables = {
     },
     1: { // 11.AI
         0: [ // Sunday
-            { subject: "BD201", teacher: "SG", room: "C1", start: "07:15", end: "08:45" },
+            { subject: "BD201", teacher: "AP", room: "C1", start: "07:15", end: "08:45" },
             { subject: "ENG201", teacher: "JP", room: "A2", start: "08:45", end: "09:30" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
             { subject: "ENG201", teacher: "JP", room: "A2", start: "09:50", end: "10:35" },
@@ -67,9 +67,9 @@ export const timetables = {
         1: [ // Monday
             { subject: "MAT201", teacher: "YA", room: "C1", start: "07:15", end: "08:00" },
             { subject: "ISL", teacher: "NS", room: "A7", start: "08:00", end: "08:45" },
-            { subject: "ML201", teacher: "SG", room: "B7", start: "08:45", end: "09:30" },
+            { subject: "ML201", teacher: "AP", room: "B7", start: "08:45", end: "09:30" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
-            { subject: "ML201", teacher: "SG", room: "B7", start: "09:50", end: "10:35" },
+            { subject: "ML201", teacher: "AP", room: "B7", start: "09:50", end: "10:35" },
             { subject: "PHY201", teacher: "FM", room: "Ph. Lab", start: "10:35", end: "12:05" },
             { subject: "ENG201", teacher: "JP", room: "A2", start: "12:05", end: "12:45" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
@@ -81,13 +81,13 @@ export const timetables = {
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
             { subject: "DB201", teacher: "DR", room: "C3", start: "09:50", end: "10:35" },
             { subject: "ARB", teacher: "HS", room: "A1", start: "10:35", end: "11:20" },
-            { subject: "ML201", teacher: "SG", room: "C1", start: "11:20", end: "12:05" },
+            { subject: "ML201", teacher: "AP", room: "C1", start: "11:20", end: "12:05" },
             { subject: "PE", teacher: "O", room: "PE", start: "12:05", end: "12:45" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:45", end: "13:05" },
             { subject: "PE-S", teacher: "New/O", room: "PE", start: "13:05", end: "13:45" },
         ],
         3: [ // Wednesday 
-            { subject: "BD201", teacher: "SG", room: "C1", start: "07:15", end: "08:45" },
+            { subject: "BD201", teacher: "AP", room: "C1", start: "07:15", end: "08:45" },
             { subject: "WEB201", teacher: "AK", room: "C1", start: "08:45", end: "09:30" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
             { subject: "WEB201", teacher: "AK", room: "C1", start: "09:50", end: "10:35" },
@@ -99,9 +99,9 @@ export const timetables = {
         ],
         4: [
             { subject: "MAT201", teacher: "YA", room: "B6", start: "07:00", end: "08:20" },
-            { subject: "ML201", teacher: "SG", room: "C1", start: "08:20", end: "09:00" },
+            { subject: "ML201", teacher: "AP", room: "C1", start: "08:20", end: "09:00" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:00", end: "09:15" },
-            { subject: "ML201", teacher: "SG", room: "C1", start: "09:15", end: "09:55" },
+            { subject: "ML201", teacher: "AP", room: "C1", start: "09:15", end: "09:55" },
             { subject: "ENG201", teacher: "JP", room: "A2", start: "09:55", end: "11:15" },
             { subject: "WEB201", teacher: "AK", room: "C2", start: "11:15", end: "11:55" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "11:55", end: "12:10" },
