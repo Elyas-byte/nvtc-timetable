@@ -1220,7 +1220,7 @@ export const timetables = {
             { subject: "RTS301", teacher: "RC", room: "W.6", start: "13:05", end: "13:45" },
         ],
         3: [ // Wednesday
-            { subject: "ENGG203", teacher: "MC/AG", room: "BB2", start: "07:15", end: "08:45"},
+            { subject: "ENGG203", teacher: "MC/AG", room: "BB2", start: "07:15", end: "08:45" },
             { subject: "Sci.", teacher: "SS", room: "B9", start: "08:45", end: "09:30" },
             { subject: "Break 1", teacher: "N/A", room: "N/A", start: "09:30", end: "09:50" },
             { subject: "Sci.", teacher: "SS", room: "B9", start: "09:50", end: "10:35" },
