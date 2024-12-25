@@ -5,12 +5,10 @@ function getClassSchedule(selectedClass, selectedDay) {
     const currentTime = now.toTimeString().slice(0, 5); // HH:MM format
     const currentDay = now.getDay(); // 0-6 (Sun-Sat)
 
-    // Use selected day for classes, but current time for determining current/next class
     const dayClasses = timetables[selectedClass][selectedDay] || [];
     let currentClass = null;
     let nextClass = null;
 
-    // Only calculate current and next class if viewing current day
     if (selectedDay === currentDay) {
         dayClasses.forEach((classInfo, index) => {
             if (currentTime >= classInfo.start && currentTime < classInfo.end) {
@@ -35,21 +33,17 @@ function displayClasses() {
     const timeElapsedDiv = document.getElementById('time-elapsed');
     const currentTimeDiv = document.getElementById('current-time');
 
-    // Clear the table body
     scheduleBody.innerHTML = '';
 
     const now = new Date();
     const currentDay = now.getDay();
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-    // Get the schedule information
     const { currentClass, nextClass, dayClasses } = getClassSchedule(selectedClass, selectedDay);
 
-    // Populate the schedule table for selected day's classes
     dayClasses.forEach((classInfo) => {
         const row = document.createElement('tr');
 
-        // Only highlight current class if viewing current day
         if (selectedDay === currentDay && currentClass &&
             classInfo.subject === currentClass.subject &&
             classInfo.teacher === currentClass.teacher) {
@@ -66,17 +60,14 @@ function displayClasses() {
         scheduleBody.appendChild(row);
     });
 
-    // Only show current class info if viewing current day
     if (selectedDay === currentDay && currentClass) {
         currentClassDiv.innerHTML = `Current Class: ${currentClass.subject} (Room: ${currentClass.room}, ${currentClass.teacher})`;
 
-        // Calculate end time
         const currentClassEnd = new Date();
         const [endHour, endMinute] = currentClass.end.split(':');
         currentClassEnd.setHours(endHour, endMinute, 0);
         const remainingTime = Math.ceil((currentClassEnd - new Date()) / 1000);
 
-        // Calculate start time
         const currentClassStart = new Date();
         const [startHour, startMinute] = currentClass.start.split(':');
         currentClassStart.setHours(startHour, startMinute, 0);
@@ -102,7 +93,6 @@ function displayClasses() {
         currentTimeDiv.innerHTML = selectedDay === currentDay ? now.toLocaleTimeString('en-US', { hour12: false }) : "";
     }
 
-    // Only show next class info if viewing current day
     if (selectedDay === currentDay && nextClass) {
         nextClassDiv.innerHTML = `Next Class: ${nextClass.subject} (Room: ${nextClass.room})`;
 
@@ -122,7 +112,6 @@ function displayClasses() {
     }
 }
 
-// Initialize day select with options
 function initializeDaySelect() {
     const daySelect = document.getElementById('day');
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -135,22 +124,17 @@ function initializeDaySelect() {
         daySelect.appendChild(option);
     });
 
-    // Set default value to current day
     daySelect.value = currentDay;
 }
 
-// Initialize day select when page loads
 initializeDaySelect();
 
-// Add event listener for day select
 document.getElementById('day').addEventListener('change', displayClasses);
 
-// Keep existing event listeners and interval
 displayClasses();
 setInterval(displayClasses, 1000);
 document.getElementById('class-select').addEventListener('change', displayClasses);
 
-// Keep existing theme toggle functionality
 const toggleThemeButton = document.getElementById('toggle-theme');
 
 function setTheme(theme) {
@@ -174,7 +158,6 @@ toggleThemeButton.addEventListener('click', () => {
     setTheme(currentTheme);
 });
 
-// Load saved preferences
 const savedClass = localStorage.getItem('selectedClass');
 if (savedClass) {
     document.getElementById('class-select').value = savedClass;
