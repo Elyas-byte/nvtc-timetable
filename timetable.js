@@ -51,14 +51,14 @@ export const timetables = {
         4: [ // Thursday
             { subject: "PHY202", teacher: "FM", room: "Phy. lab", start: "08:00", end: "08:35" },
             { subject: "PHY202 ", teacher: "FM", room: "Phy. lab", start: "08:35", end: "09:10" },
-            { subject: "PE", teacher: "N/A", room: "N/A", start: "09:10", end: "09:45" },
-            { subject: "PE-S", teacher: "O", room: "PE", start: "09:45", end: "10:20" },
-            { subject: "Break 1", teacher: "O", room: "PE", start: "10:20", end: "10:30" },
+            { subject: "PE", teacher: "O", room: "PE", start: "09:10", end: "09:45" },
+            { subject: "PE-S", teacher: "O/New", room: "PE", start: "09:45", end: "10:20" },
+            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "10:20", end: "10:30" },
             { subject: "ARC202", teacher: "MS", room: "BB2", start: "10:30", end: "11:05" },
             { subject: "ARC202 ", teacher: "MS", room: "BB2", start: "11:05", end: "11:40" },
             { subject: "ENG202", teacher: "JP", room: "A2", start: "11:40", end: "12:15" },
-            { subject: "ENG202 ", teacher: "N/A", room: "N/A", start: "12:15", end: "12:50" },
-            { subject: "Break 2", teacher: "JP", room: "A2", start: "12:50", end: "13:05" },        ]
+            { subject: "ENG202 ", teacher: "JP", room: "A2", start: "12:15", end: "12:50" },
+            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:50", end: "13:05" },        ]
     },
     1: { // 11.AI
         0: [ // Sunday
@@ -109,7 +109,7 @@ export const timetables = {
             { subject: "WEB202 ", teacher: "AK", room: "C4", start: "12:15", end: "12:50" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:50", end: "13:05" },
         ],
-        4: [ // Thursday - Unchanged as requested
+        4: [ // Thursday
             { subject: "ML202", teacher: "AA", room: "B2", start: "07:00", end: "07:40" },
             { subject: "ML202", teacher: "AA", room: "B2", start: "07:40", end: "08:20" },
             { subject: "MAT202", teacher: "YA", room: "B6", start: "08:20", end: "09:00" },
@@ -172,7 +172,7 @@ export const timetables = {
             { subject: "PE-S", teacher: "New/O", room: "PE", start: "12:15", end: "12:50" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:50", end: "13:05" },
         ],
-        4: [ // Thursday - Unchanged as requested
+        4: [ // Thursday
             { subject: "PEH202", teacher: "AA/KM", room: "C3", start: "07:00", end: "07:40" },
             { subject: "PEH202 ", teacher: "AA/KM", room: "C3", start: "07:40", end: "08:20" },
             { subject: "MAT202", teacher: "AQ", room: "B5", start: "08:20", end: "09:00" },
