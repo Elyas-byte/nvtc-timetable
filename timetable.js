@@ -48,19 +48,17 @@ export const timetables = {
             { subject: "ARC202 ", teacher: "MS", room: "C2", start: "12:15", end: "12:50" },
             { subject: "Break 2", teacher: "N/A", room: "N/A", start: "12:50", end: "13:05" },
         ],
-        4: [ // Thursday - Unchanged as requested
-            { subject: "PHY202", teacher: "FM", room: "Phy. lab", start: "07:00", end: "07:40" },
-            { subject: "PHY202 ", teacher: "FM", room: "Phy. lab", start: "07:40", end: "08:20" },
-            { subject: "Break 1", teacher: "N/A", room: "N/A", start: "08:20", end: "08:35" },
-            { subject: "PE", teacher: "O", room: "PE", start: "08:35", end: "09:15" },
-            { subject: "PE-S", teacher: "O", room: "PE", start: "09:15", end: "09:55" },
-            { subject: "ARC202", teacher: "MS", room: "BB2", start: "09:55", end: "10:35" },
-            { subject: "ARC202 ", teacher: "MS", room: "BB2", start: "10:35", end: "11:15" },
-            { subject: "ENG202", teacher: "JP", room: "A2", start: "11:15", end: "11:55" },
-            { subject: "Break 2", teacher: "N/A", room: "N/A", start: "11:55", end: "12:10" },
-            { subject: "ENG202 ", teacher: "JP", room: "A2", start: "12:10", end: "12:50" },
-            { subject: "Clubs", teacher: "???", room: "???", start: "12:55", end: "13:45" },
-        ]
+        4: [ // Thursday
+            { subject: "PHY202", teacher: "FM", room: "Phy. lab", start: "08:00", end: "08:35" },
+            { subject: "PHY202 ", teacher: "FM", room: "Phy. lab", start: "08:35", end: "09:10" },
+            { subject: "PE", teacher: "N/A", room: "N/A", start: "09:10", end: "09:45" },
+            { subject: "PE-S", teacher: "O", room: "PE", start: "09:45", end: "10:20" },
+            { subject: "Break 1", teacher: "O", room: "PE", start: "10:20", end: "10:30" },
+            { subject: "ARC202", teacher: "MS", room: "BB2", start: "10:30", end: "11:05" },
+            { subject: "ARC202 ", teacher: "MS", room: "BB2", start: "11:05", end: "11:40" },
+            { subject: "ENG202", teacher: "JP", room: "A2", start: "11:40", end: "12:15" },
+            { subject: "ENG202 ", teacher: "N/A", room: "N/A", start: "12:15", end: "12:50" },
+            { subject: "Break 2", teacher: "JP", room: "A2", start: "12:50", end: "13:05" },        ]
     },
     1: { // 11.AI
         0: [ // Sunday
